@@ -22,6 +22,7 @@ This repository is a **case study**, not the product's source code. It documents
 - [Project status](#project-status)
 - [Documentation map](#documentation-map)
 - [What this project demonstrates](#what-this-project-demonstrates)
+- [My Role](#my-role)
 - [Contact](#contact)
 
 ---
@@ -131,8 +132,12 @@ This case study is meant to show, with evidence rather than claims, the ability 
 
 See [Portfolio Positioning](docs/en/portfolio-positioning.md) for the full breakdown mapped to specific competencies (requirements analysis, business analysis, systems architecture, product thinking, and full-stack/hybrid development).
 
+## My Role
+
+I designed, documented, built, and operated ZapCare end-to-end as a solo founder/operator, covering requirements analysis, business rules, solution architecture, workflow automation, AI assistant design, integrations, admin tooling, and go-to-market operations.
+
 ## Contact
 
-**Matheus Bittencourt** — [contact-email]
+**Matheus Bittencourt** — zapcare.contato@gmail.com
 
 This repository is a portfolio artifact. It intentionally excludes credentials, production infrastructure details, and any real patient or prospect data.

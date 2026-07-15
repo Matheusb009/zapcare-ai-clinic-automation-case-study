@@ -22,6 +22,7 @@ Este repositório é um **estudo de caso**, não o código-fonte do produto. Ele
 - [Status do projeto](#status-do-projeto)
 - [Mapa da documentação](#mapa-da-documentação)
 - [O que este projeto demonstra](#o-que-este-projeto-demonstra)
+- [Meu Papel](#meu-papel)
 - [Contato](#contato)
 
 ---
@@ -131,8 +132,12 @@ Este estudo de caso busca mostrar, com evidência em vez de afirmação, a capac
 
 Veja [Posicionamento de Portfólio](docs/pt-BR/posicionamento-portfolio.md) para o detalhamento completo mapeado a competências específicas (análise de requisitos, análise de negócio, arquitetura de sistemas, pensamento de produto e desenvolvimento full-stack/híbrido).
 
+## Meu Papel
+
+Eu desenhei, documentei, construí e operei a ZapCare de ponta a ponta como fundador/operador solo, cobrindo análise de requisitos, regras de negócio, arquitetura de solução, automação de fluxos, desenho da assistente de IA, integrações, painel administrativo e operações de go-to-market.
+
 ## Contato
 
-**Matheus Bittencourt** — [contact-email]
+**Matheus Bittencourt** — zapcare.contato@gmail.com
 
 Este repositório é um artefato de portfólio. Ele exclui deliberadamente credenciais, detalhes de infraestrutura de produção e qualquer dado real de paciente ou prospect.

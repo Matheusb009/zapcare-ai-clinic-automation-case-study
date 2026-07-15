@@ -1,0 +1,23 @@
+# Portfolio Positioning
+
+> 🇧🇷 [Ler em português](../pt-BR/posicionamento-portfolio.md)
+
+This document maps specific professional competencies to concrete evidence in this repository, rather than asserting them. Each row links to the artifact that backs the claim — the point is to let a reviewer verify, not just take the claim on faith.
+
+| Competency | Evidence in this project |
+|---|---|
+| **Requirements gathering** | [System Requirements](system-requirements.md) breaks the product into functional, non-functional, security, observability, scalability, maintenance, and integration requirements — each tagged with real implementation status, including gaps, not just a wish list. |
+| **Business rules modeling** | [Business Rules](business-rules.md) documents the actual constraints enforced in the schema and workflow logic (e.g., the `(phone, clinic_id)` uniqueness constraint, the hard LGPD consent gate, the single restricted billing-status RPC) — rules that hold up against real edge cases like consent races and multi-tenant isolation, not idealized policy. |
+| **Solution architecture** | [Architecture](architecture.md) lays out a six-component system with explicit data-flow diagrams, a stated core principle ("the database is the contract"), defined security boundaries, and an honest accounting of architectural debt — the kind of document meant to be handed to another engineer, not just admired. |
+| **Integrations** | [Integrations](integrations.md) compares real alternatives (official WhatsApp API vs. UazAPI, build-vs-buy for the support inbox, managed vs. self-managed database) with stated trade-offs and risks, not just a list of logos. |
+| **Automation** | The orchestration layer (n8n) automates the entire patient-conversation lifecycle — ingestion, queueing, AI routing, booking, reminders, retries, health checks, SLA monitoring, and reactivation — with no manual step in the default path. See [Architecture § 3.2](architecture.md#32-orchestration-layer-n8n). |
+| **Applied AI** | [Sofia AI Flows](sofia-ai-flows.md) documents tool-calling (not just chat completion), tiered model routing for cost control, bounded conversation memory, and hard behavioral guardrails enforced outside the prompt — evidence of understanding AI system design, not just prompt-writing. |
+| **B2B product thinking** | The [README](../../README.md) states a specific problem, a specific target customer profile, and a solution scoped to that customer — not a generic "AI chatbot" pitch. [ADR-0008](adrs/0008-manual-billing-before-stripe.md) shows deliberate scope sequencing (manual billing before automated billing) based on actual stage, not defaulting to the most sophisticated option available. |
+| **CRM and operations** | The admin panel's CRM (lead pipeline, stage tracking, source attribution) and operational views (queue, conversations, health) are documented in [Architecture § 3.5](architecture.md#35-admin-panel) and exercised in [Use Cases UC-6 through UC-9](use-cases.md) — covering both the commercial pipeline and day-to-day system operation. |
+| **Technical documentation** | This repository itself: bilingual, cross-linked, explicit about what's implemented vs. planned vs. unverified (`[to validate]` tags throughout), and honest about known debt rather than presenting a sanitized-only view. |
+| **Analytical thinking** | [ADRs](adrs/) show the pattern of stating a context, real alternatives actually considered, a decision, and consequences — including negative consequences — for eight distinct technical decisions, rather than presenting choices as obvious in hindsight. |
+| **Hybrid full-stack / low-code / no-code development** | The system spans hand-written React/TypeScript applications (admin panel, landing page) and a visual workflow orchestration layer (n8n) with custom SQL/RPC logic underneath both — the same person designed the database schema, wrote the frontend code, and built the automation layer, and made a deliberate call about which parts of the system belonged in which layer (see [ADR-0001](adrs/0001-n8n-orchestration.md)). |
+
+## Why this matters for a hiring evaluation
+
+Most portfolio projects are either a polished toy (a to-do app with clean code, no real constraints) or a real project with no documentation (a GitHub link and a shrug). This case study is an attempt at the harder, more useful thing: taking a system that had to survive contact with a real clinic and a real patient, and writing down the requirements, rules, architecture, and decisions clearly enough that someone who never talked to the author could still evaluate the thinking behind it.

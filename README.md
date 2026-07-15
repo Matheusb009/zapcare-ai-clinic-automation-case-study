@@ -17,6 +17,7 @@ This repository is a **case study**, not the product's source code. It documents
 - [Target audience](#target-audience)
 - [The solution](#the-solution)
 - [Key features](#key-features)
+- [Product screenshots](#product-screenshots)
 - [Tech stack](#tech-stack)
 - [Project status](#project-status)
 - [Documentation map](#documentation-map)
@@ -70,6 +71,18 @@ See [`docs/en/architecture.md`](docs/en/architecture.md) for the full system dia
 - **Multi-clinic architecture**: every table and unique constraint is scoped by `clinic_id`, not assumed single-tenant.
 - **Admin panel**: clinic management, live conversation/appointment/queue views, manual billing status control, and a sales CRM (lead pipeline from first contact to paying customer).
 - **Audited write actions**: sensitive admin actions (pausing AI, requeueing a failed message, updating billing) are logged, not silent.
+
+## Product screenshots
+
+All screenshots below are captured from the real admin panel UI running against **fictional, sanitized demo data** (fake clinics, fake phone numbers, fake emails) — no real clinic, patient, or prospect data is shown. `[mockup with fictional data]`
+
+| | |
+|---|---|
+| ![Admin dashboard overview](assets/screenshots/admin-dashboard-overview.png) | **Admin dashboard overview** — key metrics, active clinics, the attendance funnel, and Sofia's recent activity feed at a glance. `[mockup with fictional data]` |
+| ![Clinics management](assets/screenshots/clinics-management.png) | **Clinics management** — every clinic with its status, plan, billing state (trial / active / overdue / cancelled), and available admin actions. `[mockup with fictional data]` |
+| ![Sofia AI monitoring](assets/screenshots/sofia-ai-monitoring.png) | **Conversations / Sofia AI monitoring** — live conversation states (bot active, human handoff, closed), consent status, and one-click AI pause/resume per conversation. `[mockup with fictional data]` |
+| ![Billing and trial management](assets/screenshots/billing-management.png) | **Billing / trial management** — trial countdown banner, billing summary counters, and per-clinic billing status and actions. `[mockup with fictional data]` |
+| ![Integrations and operations monitoring](assets/screenshots/integrations-operations.png) | **Integrations / operations monitoring** — health signals for n8n/Worker, WhatsApp, Google Calendar, and Chatwoot, plus recommended actions and recent logs. `[mockup with fictional data]` |
 
 ## Tech stack
 

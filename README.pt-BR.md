@@ -17,6 +17,7 @@ Este repositório é um **estudo de caso**, não o código-fonte do produto. Ele
 - [Público-alvo](#público-alvo)
 - [A solução](#a-solução)
 - [Principais funcionalidades](#principais-funcionalidades)
+- [Screenshots do produto](#screenshots-do-produto)
 - [Stack tecnológica](#stack-tecnológica)
 - [Status do projeto](#status-do-projeto)
 - [Mapa da documentação](#mapa-da-documentação)
@@ -70,6 +71,18 @@ Veja [`docs/pt-BR/arquitetura.md`](docs/pt-BR/arquitetura.md) para o diagrama co
 - **Arquitetura multi-clínica**: toda tabela e constraint única é isolada por `clinic_id`, não assume single-tenant.
 - **Painel administrativo**: gestão de clínicas, visão ao vivo de conversas/agendamentos/fila, controle manual de status de cobrança e um CRM comercial (pipeline de lead até cliente pagante).
 - **Ações de escrita auditadas**: ações administrativas sensíveis (pausar IA, reenfileirar mensagem falha, atualizar cobrança) são registradas em log, não silenciosas.
+
+## Screenshots do produto
+
+Todos os screenshots abaixo foram capturados da interface real do painel admin, rodando com **dados de demonstração fictícios e sanitizados** (clínicas, telefones e e-mails falsos) — nenhum dado real de clínica, paciente ou prospect é exibido. `[mockup com dados fictícios]`
+
+| | |
+|---|---|
+| ![Visão geral do dashboard admin](assets/screenshots/admin-dashboard-overview.png) | **Visão geral do dashboard admin** — métricas principais, clínicas ativas, funil de atendimento e atividade recente da Sofia, tudo em uma tela. `[mockup com dados fictícios]` |
+| ![Gestão de clínicas](assets/screenshots/clinics-management.png) | **Gestão de clínicas** — cada clínica com status, plano, situação de cobrança (trial / ativo / atrasado / cancelado) e ações administrativas disponíveis. `[mockup com dados fictícios]` |
+| ![Monitoramento da Sofia IA](assets/screenshots/sofia-ai-monitoring.png) | **Conversas / monitoramento da Sofia IA** — estado de cada conversa (bot ativo, transferida para humano, encerrada), status de consentimento, e pausa/retomada da IA com um clique. `[mockup com dados fictícios]` |
+| ![Gestão de cobrança e trial](assets/screenshots/billing-management.png) | **Gestão de cobrança / trial** — banner de contagem regressiva do trial, contadores-resumo de cobrança e status/ações de cobrança por clínica. `[mockup com dados fictícios]` |
+| ![Integrações e monitoramento operacional](assets/screenshots/integrations-operations.png) | **Integrações / monitoramento operacional** — sinais de saúde do n8n/Worker, WhatsApp, Google Calendar e Chatwoot, além de ações recomendadas e logs recentes. `[mockup com dados fictícios]` |
 
 ## Stack tecnológica
 
